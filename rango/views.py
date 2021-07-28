@@ -10,5 +10,4 @@ def index(request):
     # Note that the first parameter is the template we wish to use.
     return render(request, 'rango/index.html', context=context_dict)
 def about(request):
-    context_dict = {'boldmessage': 'Learn more about us here.'}
-    return render(request, 'rango/about.html', context_dict)
+    return render(request, 'rango/about.html')
