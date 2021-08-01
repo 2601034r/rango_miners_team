@@ -1,6 +1,7 @@
-# tango_with_django_project
-This is done by Sreeram Ravishankar (2601034R)
-This repository consists of 22 Commits totally and 1 Branch.
-The commits for few initial chapters have either numerical or Alphabetical numeral titles for the commits.
-Test Cases have been passed Successfully.
+# rango_lib
+This is a Team Project undertaken by Team Rango Miners
 
+This Team is comprised of -
+Sreeram Ravishankar - 2601034R
+Akshay Kilaru - 2589447K
+Anton Matskevich - 2539247M​
