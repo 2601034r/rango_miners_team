@@ -5,7 +5,12 @@
     Register
 {% endblock %}
 
+{% block registercss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"> 
+{% endblock %}
+
 {% block body_block %}
+<section id="main">
 <h1>Register for Rango</h1>
 {% if registered %}
 Rango says: <strong>thank you for registering!</strong>
@@ -20,4 +25,5 @@ Rango says: <strong>register here!</strong><br />
     <input type="submit" name="submit" value="Register" />
 </form>
 {% endif %}
+</section>
 {% endblock %}
