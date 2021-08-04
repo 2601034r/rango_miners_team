@@ -10,7 +10,12 @@
 }
 
 body {
-  background-image: url("../images/pexels-vishnu-r-nair-1105666.jpg");
+  /* background-image: url("../images/pexels-vishnu-r-nair-1105666.jpg"); */
+  background: linear-gradient(
+    90deg,
+    rgba(52, 20, 103, 1) 46%,
+    rgba(115, 6, 223, 1) 100%
+  );
   background-color: var(--main-color);
   margin: 0;
   padding: 20rem;
@@ -27,7 +32,7 @@ body {
   height: 470px;
   padding: 70px 40px;
   box-sizing: border-box;
-  background: rgba(151, 148, 148,0.6);
+  background: rgba(151, 148, 148, 0.6);
 }
 
 .user {
@@ -36,7 +41,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  top: calc(-100px/2);
+  top: calc(-100px / 2);
   left: calc(50% - 50px);
 }
 
@@ -67,13 +72,12 @@ h2 {
   outline: none;
   height: 40px;
   /* color: #fff; */
-  color:#000;
+  color: #000;
   font-size: 16px;
 }
 
-::placeholder
-{
-  color: rgba(0, 0, 0,0.6);
+::placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .loginBox input[type="submit"] {
@@ -82,7 +86,7 @@ h2 {
   height: 40px;
   color: #eee;
   font-size: 16px;
-  background-color:#2b1055;
+  background-color: #2b1055;
   cursor: pointer;
   border-radius: 20px;
   margin: 12px 0 18px;

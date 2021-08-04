@@ -42,7 +42,11 @@
 
         <ul>
             <!-- <div id="userProfile"> -->
+                {% if user.is_authenticated %}
                 <a id="userProfile" href="{% url 'rango:user_profile' %}"><img id="userProfile" src="{{ user.userprofile.picture.url }}" alt=""></a>
+                {% else %}
+                <a href="{% url 'rango:login' %}" id="login-btn">Login</a>
+                {% endif %}
             <!-- </div> -->
             <!-- <li><a href="#" class="active">User</a></li> -->
         </ul>

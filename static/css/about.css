@@ -6,11 +6,11 @@
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 #main {
   background-color: var(--main-color);
   width: 100%;
-  /* height: 100vh; */
   padding: 5rem;
 }
 
@@ -65,4 +65,10 @@ body {
 .pic {
   height: 100%;
   width: 100%;
+}
+
+.nav {
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
 }

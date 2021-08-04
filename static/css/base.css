@@ -112,3 +112,17 @@ header ul li a.active {
   font-size: 0.8rem;
   content: "Profile";
 }
+
+#login-btn {
+  background-color: var(--secondary-color);
+  padding: 1.2rem;
+  color: var(--main-color);
+  text-decoration: none;
+  border-radius: 1rem;
+  transition: 0.3s linear;
+}
+
+#login-btn:hover {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
