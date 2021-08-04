@@ -7,17 +7,19 @@
 <link href="https://getbootstrap.com/docs/4.2/examples/dashboard/dashboard.css"rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
 {% endblock %}
+{% block extrascripts %}
+<script src="{% static 'scripts/about.js' %}"></script>
+{% endblock %}
 {% block title_block %}
 About Rango
 {% endblock %}
-
 {% block body_block %}
 <section id="main">
 <div class="py-5 members" id="main">
   <div class="container">
       <div class="row justify-content-center mb-3">
           <div class="col-md-7 text-center">
-              <h1 class="display-5 mb-3">Meet Our Team at Rango Lib</h1>
+              <h1 class="display-5 mb-3"><span id="anim"></span><span id="shuffle"></span></h1>
               <p class="lead">When we started Rango Lib, our goal was to give anyone 
                   in the world the ability to learn the skills they’d need to succeed 
                   in the 21st century. We set out to create a new, interactive way of 

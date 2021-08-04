@@ -20,52 +20,35 @@ body {
 .members {
   font-family: "Montserrat", sans-serif;
   color: #8d97ad;
-  font-weight: 300;
+  font-weight: 700;
 }
 
-.members h1,
 .members h2,
 .members h3,
 .members h4,
-.members h5,
-.members h6 {
+.members h5 {
   color: #3e4555;
+}
+
+.members h1 {
+  color: #ffffff;
+}
+
+.members h6 {
+  color: #102c55;
+  font-size: medium;
+  font-weight: 900;
 }
 
 .members .font-weight-medium {
   font-weight: 500;
 }
 
-.members .subtitle {
-  color: #8d97ad;
-  line-height: 24px;
-}
-
-.members .pro-pic {
-  min-height: 200px;
-}
-
-.members .pro-pic .card-img-overlay ul {
-  top: 50%;
-}
-
-.members .pro-pic .card-img-overlay ul li a {
-  -webkit-transition: 0.1s ease-in;
-  -o-transition: 0.1s ease-in;
-  transition: 0.1s ease-in;
-}
-
-.members .pro-pic .card-img-overlay ul li a:hover {
-  -webkit-transform: translate3d(0px, -5px, 0px);
-  transform: translate3d(0px, -5px, 0px);
-}
-
-.members .pro-pic:hover .card-img-overlay {
-  display: block;
-}
 .pic {
-  height: 100%;
   width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
 }
 
 .nav {
