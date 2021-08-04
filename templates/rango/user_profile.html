@@ -11,6 +11,26 @@
 
 {% block body_block %}
 <section id="main">
-
+    <section id="main-content">
+        <h1>Your profile {{ user.username }}</h1>
+        
+        <div id="user-info-section">
+            <div class="img-holder"><img id="userPhoto" src="{{ user.userprofile.picture.url }}" alt=""></div>
+            <form id="user-info-form">
+                
+                Username <input type="text" class="input-fields">
+                New username <input type="text" class="input-fields">
+                <br><br>
+                Email <input type="text" class="input-fields">
+                New email <input type="text" class="input-fields">
+                <br><br>
+                Password <input type="text" class="input-fields">
+                New password <input type="text" class="input-fields">
+                Confirm password <input type="text" class="input-fields">
+                <br><br>
+                <button type="submit">Submit changes</button>
+            </form>
+        </div>
+    </section>
 </section>
 {% endblock %}
