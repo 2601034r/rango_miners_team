@@ -1,6 +1,10 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block aboutcss %}
+<!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="https://getbootstrap.com/docs/4.2/examples/dashboard/dashboard.css"rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
 {% endblock %}
 {% block title_block %}
@@ -8,13 +12,101 @@ About Rango
 {% endblock %}
 
 {% block body_block %}
-<section id="main">
+<div class="py-5 members" id="main">
+  <div class="container">
+      <div class="row justify-content-center mb-3">
+          <div class="col-md-7 text-center">
+              <h1 class="display-5 mb-3">Meet Our Team</h1>
+              <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+      </div>
+      <div class="row">
+          <!-- column  -->
+          <div class="col-lg-6">
+              <div class="card shadow border-0 mb-4">
+                  <!-- Row -->
+                    <!-- Row -->
+                    <div class="row d-flex align-items-center">
+                      <div class="col-5 bg-white">
+                       <img class="pic" src="{% static 'images/img3.jpeg' %}">
+                    </div>
+                          <div class="col-md-7 ">
+                              <div class="p-4">
+                                  <h6 class="mb-3">Johnna Doe</h6>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                  
+                              </div>
+                          </div>
+                        </div>
+              </div>
+          </div> <!-- column  -->
+          <div class="col-lg-6">
+              <div class="card shadow border-0 mb-4">
+                  <!-- Row -->
+                  <div class="row d-flex align-items-center">
+                  <div class="col-5 bg-white">
+                   <img class="pic" src="{% static 'images/img1.png' %}">
+                </div>
+                      <div class="col-md-7 ">
+                          <div class="p-4">
+                              <h6 class="mb-3">Johnna Doe</h6>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                              
+                          </div>
+                      </div>
+                    </div>
+                  </div> <!-- Row -->
+              </div>
+          </div> <!-- column  -->
+      </div>
+      <div class="row d-flex justify-content-center align-items-center">
+          <!-- column  -->
+          <div class="col-lg-6">
+              <div class="card card-shadow border-0 mb-4">
+                  <!-- Row -->
+                  <div class="row d-flex align-items-center">
+                    <div class="col-5 bg-white">
+                     <img class="pic" src="{% static 'images/img2.jpeg' %}">
+                  </div>
+                        <div class="col-md-7">
+                            <div class="p-4">
+                                <h6 class="mb-3">Johnna Doe</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                
+                            </div>
+                        </div>
+                      </div>
+                  </div> <!-- Row -->
+              </div>
+          </div> <!-- column  -->
+          
+      </div>
+  </div>
+</div>
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <script>
+window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')
+</script>
+<script src="https://getbootstrap.com/docs/4.2/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js">
+</script>
+<script src="https://getbootstrap.com/docs/4.2/examples/dashboard/dashboard.js">
+</script>
+<!-- <div id="main">
+  <div class="title">
+    <h1>About Us</h1>
+  </div>
+</div> -->
+<!-- <section id="main">
 <h1>Rango says...</h1>
 <div>
     here is the about page. <br />
     <p>Visits: {{ visits }}</p>
 </div>
 <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
-<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat" />
+<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat" /> -->
 {% endblock %}
-</section>
+<!-- </section> -->
