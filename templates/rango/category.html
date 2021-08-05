@@ -14,13 +14,13 @@
 {% block body_block %}
 <section id='main'>
     {% if category %}
-    <h1>{{ category.name }}</h1>
+    <h1 id="header1">Available Resources on </br> {{ category.name }}</h1>
     {% if pages %}
-    <ul>
+    <ol>
         {% for page in pages %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        <li id="sublists2"><a href="{{ page.url }}"><h2 id="innerlinks">{{ page.title }}</h2></a></li>
         {% endfor %}
-    </ul>
+    </ol>
     {% else %}
     <strong>No pages currently in category.</strong>
     {% endif %}
