@@ -9,21 +9,34 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"> 
 {% endblock %}
 
-{% block body_block %}
-<section id="main">
-<h1>Register for Rango</h1>
-{% if registered %}
-Rango says: <strong>thank you for registering!</strong>
-<a href="{% url 'rango:index' %}">Return to the homepage.</a><br />
-{% else %}
-Rango says: <strong>register here!</strong><br />
-<form id="user_form" method="post" action="{% url 'rango:register' %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ user_form.as_p }}
-    {{ profile_form.as_p }}
+{% block extrascripts %}
+<script src="{% static 'scripts/register.js' %}"></script>
+{% endblock %}
 
-    <input type="submit" name="submit" value="Register" />
-</form>
+{% block body_block %}
+{% if registered %}
+    Rango says: <strong>thank you for registering!</strong>
+    <a href="{% url 'rango:index' %}">Return to the homepage.</a><br />
+{% else %}
+
+<di class="main">
+    <div class="loginBox">
+        <img class="user" src="{% static 'images/default_face.png' %}">
+        <h2>Register For Rango Lib</h2>
+        <h2>
+            <a href="" class="typewrite" data-period="500" data-type='[ "Learn Python", "Learn Java", "Learn Data Science", "Learn HTML/CSS" ]'>
+                <span class="wrap"></span>
+            </a>
+        </h2>
+
+        <form id="login_form" method="post" action="{% url 'rango:register' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <input type="submit" name="submit" value="Register" />
+        </form>
+    </div>
+</div>
+
 {% endif %}
-</section>
 {% endblock %}
