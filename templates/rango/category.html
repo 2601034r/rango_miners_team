@@ -8,8 +8,11 @@
         Unknown Category
     {% endif %}
 {% endblock %}
-
+{% block categoriescss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}">
+{% endblock %}
 {% block body_block %}
+<section id='main'>
     {% if category %}
     <h1>{{ category.name }}</h1>
     {% if pages %}
@@ -28,4 +31,5 @@
     {% else %}
     The specified category does not exist.
     {% endif %}
+</section>
 {% endblock %}

@@ -11,6 +11,7 @@ body {
 #main {
   background-color: var(--main-color);
   width: 100%;
+  height: 100vh;
   padding-top: 5rem;
   overflow-y: hidden;
 }
@@ -49,11 +50,9 @@ h1 {
   flex-direction: column;
 }
 #user-info-form {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-/* .input-fields {
-} */
