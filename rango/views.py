@@ -194,3 +194,7 @@ def get_server_side_cookie(request, cookie, default_val=None):
 def user_profile(request):
     visitor_cookie_handler(request)
     return render(request, 'rango/user_profile.html')
+
+def contact_us(request):
+    visitor_cookie_handler(request)
+    return render(request, 'rango/contact_us.html')

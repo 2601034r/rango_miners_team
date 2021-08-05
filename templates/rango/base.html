@@ -12,6 +12,7 @@
     {% block user_profilecss %} {% endblock user_profilecss %}
     {% block addcategorycss %} {% endblock addcategorycss %}
     {% block registercss %} {% endblock registercss %}
+    {% block contactcss %} {% endblock contactcss %}
 
 
     {% block scripts_index %} {% endblock scripts_index %}
@@ -65,6 +66,7 @@
             {% endif %}
             <li><a href="{% url 'rango:about' %}">About</a></li>
             <li><a href="{% url 'rango:index' %}">Index</a></li>
+            <li><a href="{% url 'rango:contact_us' %}">Contact us</a></li>
         </div>
 
     </div>

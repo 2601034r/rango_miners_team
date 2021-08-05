@@ -14,4 +14,5 @@ urlpatterns = [
     path('restricted/', views.restricted, name='restricted'),
     path('logout/', views.user_logout, name='logout'),
     path('user_profile/', views.user_profile, name='user_profile'),
+    path('contact_us/', views.contact_us, name='contact_us'),
 ]
