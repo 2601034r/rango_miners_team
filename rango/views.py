@@ -1,3 +1,4 @@
+from rango.forms import ContactForm
 from django.shortcuts import render
 from django.http import HttpResponse
 from rango.models import Category
@@ -11,6 +12,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from datetime import datetime
+from django.core.mail import send_mail
+from django.conf import settings
 
 def index(request):
     # Query the database for a list of ALL categories currently stored.
@@ -209,8 +212,17 @@ def edit_profile(request):
         return render(request, 'rango/edit_profile.html', args)
 
 def contact_us(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
+            email_message = form.cleaned_data['message']
+            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
+    form = ContactForm()
+    context = {'form':form}
     visitor_cookie_handler(request)
-    return render(request, 'rango/contact_us.html')
+    return render(request, 'rango/contact_us.html',context)
 
 def pages(request):
     page_list = Page.objects.order_by('-views')
