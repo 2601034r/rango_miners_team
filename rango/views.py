@@ -14,7 +14,7 @@ from django.contrib.auth import logout
 from datetime import datetime
 from django.core.mail import send_mail
 from django.conf import settings
-from django.core.mail import send_mail, BadHeaderError
+from django.db.models import Q
 
 def index(request):
     # Query the database for a list of ALL categories currently stored.
@@ -238,3 +238,11 @@ def categories(request):
     context_dict['categories'] = category_list
     visitor_cookie_handler(request)
     return render(request, 'rango/categories.html', context=context_dict)
+
+def categories_search(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        categories = Category.objects.filter(Q(name__contains = searched))
+        return render(request, 'rango/categories_search.html', {'searched':searched, 'categories': categories})
+    else:
+        return render(request, 'rango/categories_search.html')
