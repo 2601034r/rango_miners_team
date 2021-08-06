@@ -5,7 +5,7 @@ window.onload = function () {
       };
       var inc = 0;
       var out = 0;
-      var str = 'Meet Our Rango Lib Team';
+      var str = 'Meet Our Team';
       var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@$%&';
       var t;
       
