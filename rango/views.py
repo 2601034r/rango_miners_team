@@ -14,6 +14,7 @@ from django.contrib.auth import logout
 from datetime import datetime
 from django.core.mail import send_mail
 from django.conf import settings
+from django.core.mail import send_mail, BadHeaderError
 
 def index(request):
     # Query the database for a list of ALL categories currently stored.
@@ -218,7 +219,7 @@ def contact_us(request):
             form.save()
             email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
             email_message = form.cleaned_data['message']
-            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
+            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAILS)
     form = ContactForm()
     context = {'form':form}
     visitor_cookie_handler(request)

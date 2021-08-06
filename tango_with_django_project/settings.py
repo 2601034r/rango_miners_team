@@ -135,9 +135,11 @@ LOGIN_URL = 'rango:login'
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 
+EMAIL_HOST_USER = 'kilaru.akshay1997@gmail.com'
 CONTACT_EMAIL = 'kilaru.akshay1997@gmail.com'
-ADMIN_EMAILS = ['kilaru.akshay1997@gmail.com', ]
-
+ADMIN_EMAILS = ['matskevich.anton777@yandex.ru',]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+MAILER_EMAIL_BACKEND = EMAIL_BACKEND
 
 
 EMAIL_HOST = 'smtp.sendgrid.net'

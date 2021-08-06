@@ -13,10 +13,12 @@
 <section id="main">
     <h1>Contact us page!</h1>
     <div class='aboutpageprop'>
-     <form class="contactform">
-        <label for='email'> Email:
-        </label><br>
-        <input type="text" id='email' name='email' size = "40" class='email'><br>
+     <form class="contactform" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <!-- <label for='email'> Email:
+        </label><br> -->
+        <!-- <input type="text" id='email' name='email' size = "40" class='email'><br>
 
         <label for='phone number'> Phone Number:
         </label><br>
@@ -26,7 +28,7 @@
         <label for='subject'> Message:
         </label><br>
         <input type='text' id='message' name='message' size = "100" class='message'><br>
-        
+         -->
         <input type="submit" name="submit" value="Submit">
 
      </form>

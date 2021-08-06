@@ -42,7 +42,7 @@ class UserProfile(models.Model):
 
 class Contactus(models.Model):
     email = models.EmailField()
-    phone_number = models.CharField(max_length=255)
+    subject = models.CharField(max_length=255)
     message = models.TextField()
 
     def __str__(self):
