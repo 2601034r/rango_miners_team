@@ -17,4 +17,5 @@ urlpatterns = [
     path('user_profile/edit', views.edit_profile, name='edit_profile'),
     path('contact_us/', views.contact_us, name='contact_us'),
     path('pages/', views.pages, name='pages'),
+    path('categories/', views.categories, name='categories'),
 ]

@@ -230,3 +230,10 @@ def pages(request):
     context_dict['pages'] = page_list
     visitor_cookie_handler(request)
     return render(request, 'rango/pages.html', context = context_dict)
+
+def categories(request):
+    category_list = Category.objects.order_by('-likes')
+    context_dict = {}
+    context_dict['categories'] = category_list
+    visitor_cookie_handler(request)
+    return render(request, 'rango/categories.html', context=context_dict)

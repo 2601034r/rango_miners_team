@@ -1,14 +1,36 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 
-<ul>
-{% if categories %}
-    {% for c in categories %}
-        {% if c == current_category %}
-        <li><strong><a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a></strong></li>
-        {% else %}
-        <li><a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a></li>
-        {% endif %}
-    {% endfor %}
-{% else %}
-    <li><strong>There are no categories present.</strong></li>
-{% endif %}
-</ul>
+{% block title_block %}
+    {% if category %}
+        {{ category.name }}
+    {% else %}
+        Unknown Category
+    {% endif %}
+{% endblock %}
+{% block categorycss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/categories.css' %}">
+{% endblock %}
+{% block body_block %}
+<section id='main'>
+    <div class="sec2" id="sec2">
+        <div class="topages"><a href="#top" id="explore-btn">Go back!</a></div>
+        <div class="secinside2">
+            <h2 id ="header1">Most Viewed categories</h2>
+            <ol>
+                {% if categories %}
+                    {% for c in categories %}
+                        {% if c == current_category %}
+                        <li id="sublists2"><strong><a href="{% url 'rango:show_category' c.slug %}"><h2 id="innerlinks">{{ c.name }}</h2></a></strong></li>
+                        {% else %}
+                        <li id="sublists2"><a href="{% url 'rango:show_category' c.slug %}"><h2 id="innerlinks">{{ c.name }}</h2></a></li>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <li id="sublists2"><h2 id="innerlinks"><strong>There are no categories present.</strong></h2></li>
+                {% endif %}
+                </ol>
+        </div>
+    </div>
+</section>
+{% endblock %}
