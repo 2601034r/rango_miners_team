@@ -7,6 +7,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: var(--main-color);
 }
 
 #main {
@@ -32,4 +33,33 @@ body {
   color: rgb(255, 255, 255);
   font-size: 30px;
   text-align: left;
+}
+#ser {
+  padding-top: 15px;
+}
+
+#ser input[type="search"] {
+  border-radius: 10px;
+  height: 28px;
+  width: 20%;
+}
+#ser input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #eee;
+  font-size: 16px;
+  background-color: #2b1055;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 12px 0 18px;
+}
+#button {
+  background-color: #0e899e;
+  width: 75px;
+  height: 30px;
+  border-radius: 10px;
+}
+#button:hover {
+  background-color: rgb(34, 180, 42);
 }
