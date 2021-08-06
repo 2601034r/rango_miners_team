@@ -14,6 +14,11 @@
 {% block body_block %}
 <section id='main'>
     <div class="topages"><a href="#top" id="explore-btn">Go back!</a></div>
+    <form id = 'ser' method="POST" action="{% url 'rango:categories_search' %}">
+        {% csrf_token %}
+        <input type="search" placeholder="Search" name="searched">
+        <button>Search</button>
+    </form>
         <div class="secinside2">
             <h2 id ="header1">Most Viewed categories</h2>
             <ol>
@@ -30,10 +35,5 @@
                 {% endif %}
             </ol>
     </div>
-    <form method="POST" action="{% url 'rango:categories_search' %}">
-        {% csrf_token %}
-        <input type="search" placeholder="search" name="searched">
-        <button>Search</button>
-    </form>
 </section>
 {% endblock %}
