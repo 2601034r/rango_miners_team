@@ -25,7 +25,7 @@ Homepage
     <a href="#sec" id='btn'>Explore</a>
     <img src="{% static 'images/mountains_front.png' %}" id="mountains_front">
 </section>
-<div class="sec" id='sec'>
+<section class="sec" id='sec'>
     <div class="topages"><a href="#sec2" id="explore-btn">Explore more</a></div>
     <div class="secinside">
         <h2>Most Liked Categories</h2>
@@ -38,17 +38,18 @@ Homepage
         {% else %}
         <strong>There are no categories present.</strong>
         {% endif %}
-    </div>
+    </section>
 </div>
-<div class="sec2" id="sec2">
+<section class="sec2" id="sec2">
     <div class="topages"><a href="#top" id="explore-btn">Go back!</a></div>
-    <div class="secinside2">
+    <div class="secinside">
         <h2>Most Viewed Pages</h2>
         {% if pages %}
         <ul>
             {% for page in pages %}
             <li><a href="{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
+            <a href="{% url 'rango:pages' %}" id='btn2'>More pages</a>
         </ul>
         {% else %}
         <strong>There are no pages present.</strong>
@@ -56,6 +57,6 @@ Homepage
     </div>
 
 
-</div>
+</section>
 
 {% endblock %}
