@@ -12,7 +12,8 @@ urlpatterns = [
     path('register/', views.register, name='register'),  # New mapping!
     path('login/', views.user_login, name='login'),
     path('restricted/', views.restricted, name='restricted'),
-    path('logout/', views.user_logout, name='logout'),
+    # path('logout/', views.user_logout, name='logout'),
     path('user_profile/', views.user_profile, name='user_profile'),
+    path('user_profile/edit', views.edit_profile, name='edit_profile'),
     path('contact_us/', views.contact_us, name='contact_us'),
 ]

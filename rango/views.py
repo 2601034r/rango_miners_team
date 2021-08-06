@@ -195,6 +195,19 @@ def user_profile(request):
     visitor_cookie_handler(request)
     return render(request, 'rango/user_profile.html')
 
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=request.user)
+        
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('rango:index'))
+    else:
+        form = UserForm(instance=request.user)
+        args = {'form': form}
+        return render(request, 'rango/edit_profile.html', args)
+
 def contact_us(request):
     visitor_cookie_handler(request)
     return render(request, 'rango/contact_us.html')

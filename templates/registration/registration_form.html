@@ -1,0 +1,18 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+Register
+{% endblock %}
+{% block registercss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"> 
+{% endblock %}
+{% block body_block %}
+<section id="main">
+<h1>Register Here</h1>
+<form method="post" action=".">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Register" />
+</form>
+</section>
+{% endblock %}
