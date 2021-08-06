@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
   scroll-behavior: smooth;
+  text-size-adjust: none;
 }
 
 body {
@@ -33,7 +34,7 @@ section::before {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
   background: linear-gradient(to top, var(--main-color), transparent);
   z-index: 1000;
 }
@@ -74,7 +75,13 @@ section img#mountains_front {
 }
 .sec {
   position: relative;
+  width: 100%;
+  height: 100vh;
   padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background: var(--main-color);
 }
 .sec h2 {
@@ -89,7 +96,13 @@ section img#mountains_front {
 
 .sec2 {
   position: relative;
+  width: 100%;
+  height: 100vh;
   padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background: #630f43;
 }
 .sec2 h2 {
@@ -103,17 +116,20 @@ section img#mountains_front {
 }
 
 #section {
-  position: absolute;
+  min-height: 100vh;
 }
 .sec {
+  min-height: 100vh;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 5rem;
 }
 
 .sec2 {
+  min-height: 100vh;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -123,11 +139,11 @@ section img#mountains_front {
 
 .sec ul li {
   list-style-type: none;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .sec ul li a {
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2rem;
   color: white;
   text-decoration: none;
@@ -146,11 +162,11 @@ section img#mountains_front {
 
 .sec2 ul li {
   list-style-type: none;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .sec2 ul li a {
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2rem;
   color: white;
   text-decoration: none;
@@ -186,4 +202,16 @@ section img#mountains_front {
   text-decoration: none;
   font-family: sans-serif;
   color: var(--main-color);
+}
+
+#btn2 {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 40px;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(1.5rem);
 }
