@@ -213,7 +213,7 @@ def contact_us(request):
     return render(request, 'rango/contact_us.html')
 
 def pages(request):
-    page_list = Page.objects.order_by('-views')[:5]
+    page_list = Page.objects.order_by('-views')
     context_dict = {}
     context_dict['pages'] = page_list
     visitor_cookie_handler(request)
