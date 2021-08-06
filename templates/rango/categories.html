@@ -17,7 +17,7 @@
     <form id = 'ser' method="POST" action="{% url 'rango:categories_search' %}">
         {% csrf_token %}
         <input type="search" placeholder="Search" name="searched">
-        <button>Search</button>
+        <button id = "button">Search</button>
     </form>
         <div class="secinside2">
             <h2 id ="header1">Most Viewed categories</h2>
