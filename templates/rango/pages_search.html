@@ -15,16 +15,16 @@
 <section id='main'>
 
     {% if searched %}
-    <h1>You searched for {{ searched }}</h1>
+    <h1 id="header1">You searched for {{ searched }}</h1>
     <br/>
 
-    <ul>
+    <ol>
     {% for page in pages %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li id ="sublists2"><a href="{{ page.url }}"><h2 id="innerlinks">{{ page.title }}</h2></a></li>
     {% endfor %}
-    </ul>
+    </ol>
     {% else %}
-    <h1>You forgot to search for a category...</h1>
+    <h1 id="header1">You forgot to search for a category...</h1>
 
     {% endif %}
 
