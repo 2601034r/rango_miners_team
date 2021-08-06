@@ -34,7 +34,7 @@ Homepage
             {% for category in categories %}
             <li><a href="{% url 'rango:show_category' category.slug %}">{{ category.name }}</a></li>
             {% endfor %}
-            <a href="{% url 'rango:categories' %}" id='btn2'>More pages</a>
+            <a href="{% url 'rango:categories' %}" id='btn2'>More Categories</a>
         </ul>
         {% else %}
         <strong>There are no categories present.</strong>

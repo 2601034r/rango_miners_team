@@ -19,4 +19,5 @@ urlpatterns = [
     path('pages/', views.pages, name='pages'),
     path('categories/', views.categories, name='categories'),
     path('categories_search/', views.categories_search, name='categories_search'),
+    path('pages_search/', views.pages_search, name='pages_search'),
 ]

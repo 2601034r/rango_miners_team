@@ -28,5 +28,10 @@
             {% endif %}
         </div>
     </div>
+    <form method="POST" action="{% url 'rango:pages_search' %}">
+        {% csrf_token %}
+        <input type="search" placeholder="search" name="searched">
+        <button>Search</button>
+    </form>
 </section>
 {% endblock %}

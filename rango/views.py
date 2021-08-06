@@ -246,3 +246,10 @@ def categories_search(request):
         return render(request, 'rango/categories_search.html', {'searched':searched, 'categories': categories})
     else:
         return render(request, 'rango/categories_search.html')
+def pages_search(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        pages = Page.objects.filter(Q(title__contains = searched))
+        return render(request, 'rango/pages_search.html', {'searched':searched, 'pages': pages})
+    else:
+        return render(request, 'rango/pages_search.html')
