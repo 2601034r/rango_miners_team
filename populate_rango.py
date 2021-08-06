@@ -14,34 +14,58 @@ def populate():
     # through each data structure, and add the data to our models.
 
     python_pages = [
-        {'title': 'Official Python Tutorial',
-        'url':'http://docs.python.org/3/tutorial/',
-        'views': 122},
-        {'title':'How to Think like a Computer Scientist',
-        'url':'http://www.greenteapress.com/thinkpython/',
-        'views': 54},
-        {'title':'Learn Python in 10 Minutes',
-        'url':'http://www.korokithakis.net/tutorials/python/',
-        'views': 22} ]
+        {'title': 'Learn Python 2',
+        'url':'https://www.codecademy.com/learn/learn-python',
+        'views': 69},
+        {'title':'Learn Python in 1 Hour',
+        'url':'https://www.youtube.com/watch?v=ie-hjFXlxTs',
+        'views': 800},
+        {'title':'Python Tutorial for Beginners',
+        'url':'https://www.youtube.com/watch?v=mJEpimi_tFo',
+        'views': 162},
+        {'title':'Complete Python Course',
+        'url':'https://edube.org/?gclid=EAIaIQobChMI8qHj15-d8gIVFFZgCh27Zg4zEAAYBCAAEgKZc_D_BwE',
+        'views': 187},
+        {'title':'Official Python Tutorial',
+        'url':'https://www.python.org/about/gettingstarted/',
+        'views': 89}
+        ]
 
     django_pages = [
         {'title':'Official Django Tutorial',
         'url':'https://docs.djangoproject.com/en/2.1/intro/tutorial01/',
         'views': 40},
-        {'title':'Django Rocks',
-        'url':'http://www.djangorocks.com/',
+        {'title':'Getting Started with Django',
+        'url':'https://www.djangoproject.com/start/',
         'views': 10},
-        {'title':'How to Tango with Django',
-        'url':'http://www.tangowithdjango.com/',
-        'views': 163} ]
+        {'title':'Django Tutorial',
+        'url':'https://www.geeksforgeeks.org/django-tutorial/',
+        'views': 163},
+        {'title':'Django Tutorial For Beginners',
+        'url':'https://www.youtube.com/watch?v=OTmQOjsl0eg',
+        'views': 163}
+         ]
 
     other_pages = [
-        {'title':'Bottle',
-        'url':'http://bottlepy.org/docs/dev/',
-        'views': 58},
-        {'title':'Flask',
-        'url':'http://flask.pocoo.org',
-        'views': 72} ]
+        {'title': 'Learn Data Science In Under 3 Hours',
+        'url':'https://www.youtube.com/watch?v=aGu0fbkHhek',
+        'views': 900},
+        {'title':'Data Science For Beginners',
+        'url':'https://www.javatpoint.com/data-science',
+        'views': 64},
+        {'title':'Data Science Tutorials',
+        'url':'https://www.datacamp.com/community/tutorials',
+        'views': 84},
+        {'title':'A Path To Becomming a Data Scientist',
+        'url':'https://intellipaat.com/blog/tutorial/data-science-tutorial/',
+        'views': 648},
+        {'title':'Intro To Data Science',
+        'url':'https://www.udacity.com/course/intro-to-data-science--ud359',
+        'views': 23},
+        {'title':'Statistics and R For Data Science',
+        'url':'https://online-learning.harvard.edu/course/statistics-and-r?delta=2',
+        'views': 34}
+        ]
 
     cats = {'Python': {'pages': python_pages, 'views' : 128, 'likes' : 64},'Django': {'pages': django_pages, 'views' : 64, 'likes' : 32},'Other Frameworks': {'pages': other_pages, 'views' : 32, 'likes' : 16} }
 

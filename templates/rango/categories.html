@@ -5,7 +5,7 @@
     {% if category %}
         {{ category.name }}
     {% else %}
-        Unknown Category
+        Most Viewed
     {% endif %}
 {% endblock %}
 {% block categorycss %}
@@ -13,8 +13,7 @@
 {% endblock %}
 {% block body_block %}
 <section id='main'>
-    <div class="sec2" id="sec2">
-        <div class="topages"><a href="#top" id="explore-btn">Go back!</a></div>
+    <div class="topages"><a href="#top" id="explore-btn">Go back!</a></div>
         <div class="secinside2">
             <h2 id ="header1">Most Viewed categories</h2>
             <ol>
@@ -29,8 +28,7 @@
                 {% else %}
                     <li id="sublists2"><h2 id="innerlinks"><strong>There are no categories present.</strong></h2></li>
                 {% endif %}
-                </ol>
-        </div>
+            </ol>
     </div>
 </section>
 {% endblock %}
