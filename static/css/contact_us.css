@@ -15,45 +15,15 @@ body {
   padding: 5rem;
   overflow-y: hidden;
 }
-.aboutpageprop {
-  height: 200px;
-  width: 400 px;
-  position: static;
-  top: 50%;
-  left: 50%;
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-}
-
-.email {
-  width: 400px;
-  background-color: silver;
-  border-radius: 15px;
-  height: 25px;
-}
-
-.message {
-  height: 100px;
-  width: 400px;
-  background-color: silver;
-  border-radius: 15px;
-}
-
-.phone {
-  width: 400px;
-  background-color: silver;
-  border-radius: 15px;
-  height: 25px;
-}
 
 .contactform input[type="submit"] {
   width: 100px;
   border: none;
   outline: none;
   height: 40px;
-  color: #eee;
+  color: silver;
   font-size: 16px;
-  background-color: #48a3b9;
+  background-color: #36a4c0;
   cursor: pointer;
   border-radius: 20px;
   margin: 12px 0 18px;
@@ -61,23 +31,23 @@ body {
 
 .contactform input[type="submit"]:hover {
   background-color: #34a534;
-  color: #fff;
+  color: silver;
 }
 
 .contactform input {
-  width: 35%;
+  padding: 3px;
+  width: 60%;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-.contactform input[type="email"],
-.contactform input[type="phonenumber"],
-.contactform input[type="message"] {
+.contactform {
   border: none;
-  width: 300px;
-  border-bottom: 1px solid #000;
+  width: 350px;
+  word-spacing: 150px;
   background: transparent;
   outline: none;
   height: 40px;
-  color: #000;
+  color: silver;
   font-size: 16px;
 }
