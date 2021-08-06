@@ -12,24 +12,24 @@
 {% block body_block %}
 <section id="main">
     <h1>Contact us page!</h1>
-    <p class='aboutpage'>
-     <form>
+    <div class='aboutpageprop'>
+     <form class="contactform">
         <label for='email'> Email:
         </label><br>
         <input type="text" id='email' name='email' size = "40" class='email'><br>
 
         <label for='phone number'> Phone Number:
         </label><br>
-        <input type='text' id='phone number' name='phone number' size = "40" class='phone'><br>
+        <input type='text' id='phonenumber' name='phonenumber' size = "40" class='phone'><br>
         </label>
         
         <label for='subject'> Message:
         </label><br>
         <input type='text' id='message' name='message' size = "100" class='message'><br>
         
-        <input type='Submit' value='Submit'>
+        <input type="submit" name="submit" value="Submit">
 
      </form>
-    </p>
+    </div>
 </section>
 {% endblock %}

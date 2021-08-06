@@ -15,35 +15,69 @@ body {
   padding: 5rem;
   overflow-y: hidden;
 }
-.aboutpage {
-  height:200px;
-  width:400 px;
+.aboutpageprop {
+  height: 200px;
+  width: 400 px;
   position: static;
-  top:50%;
-  left:50%;
-  margin-top:-100px;
-  margin-left:-200px;
-  font-size: 50px;
-
+  top: 50%;
+  left: 50%;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
 }
 
 .email {
-  height: 15px;
   width: 400px;
   background-color: silver;
-
+  border-radius: 15px;
+  height: 25px;
 }
 
 .message {
   height: 100px;
   width: 400px;
   background-color: silver;
-
+  border-radius: 15px;
 }
 
 .phone {
-  height: 15px;
   width: 400px;
   background-color: silver;
+  border-radius: 15px;
+  height: 25px;
+}
 
+.contactform input[type="submit"] {
+  width: 100px;
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #eee;
+  font-size: 16px;
+  background-color: #48a3b9;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 12px 0 18px;
+}
+
+.contactform input[type="submit"]:hover {
+  background-color: #34a534;
+  color: #fff;
+}
+
+.contactform input {
+  width: 35%;
+  margin-bottom: 20px;
+}
+
+.contactform input[type="email"],
+.contactform input[type="phonenumber"],
+.contactform input[type="message"] {
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #000;
+  font-size: 16px;
 }
