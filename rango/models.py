@@ -37,5 +37,13 @@ class UserProfile(models.Model):
     website = models.URLField(blank=True)
     picture = models.ImageField(upload_to='profile_images', blank=True)
 
-def __str__(self):
-    return self.user.username
+    def __str__(self):
+     return self.user.username
+
+class Contactus(models.Model):
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
